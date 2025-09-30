@@ -6,7 +6,30 @@ Escreva um programa que conta o número de ocorrências de cada caractere em uma
 Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
 '''
 #exercicio 1
-numeros: list = range(1,11)
+# numeros: list = range(1,11)
 
-for numero in numeros:
-    print(f"Número inicial: {numero}, número ao quadrado: {numero**2}")
+# for numero in numeros:
+#     print(f"Número inicial: {numero}, número ao quadrado: {numero**2}")
+
+#exercicio 2
+
+# lista: list = ["Python", "Java", "C++", "JavaScript"]
+# lista.remove('C++')
+# lista.append('Ruby')
+# print(lista)
+
+#exercicio 3
+
+filme: dict = {
+    'Nome': ['Harry Potter','O menino do pijama listrado', 'Blade'],
+    'Autor': 'Bruno Botelho',
+    'Ano': '2002'
+
+}
+
+for chave,valor in filme.items():
+    if isinstance(valor, list):
+        for v in valor:
+            print(f'{chave}: {v}')
+    else:
+        print(f'{chave}: {valor}')
