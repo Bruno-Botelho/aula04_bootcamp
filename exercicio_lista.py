@@ -14,6 +14,49 @@ Adicione "melancia".
 Remova "uva".
 Substitua "banana" por "morango".
 '''
+# lista: list = []
+
+# while True:
+#     try:
+#         numero = int(input('Digite o range: '))
+#         break
+#     except:
+#         print('Digita o numero inteiro, MULA!!')
+
+
+# for n in range(numero):
+#     lista.append(n)
+
+# total = len(lista)-1
+
+# print(f'O primeiro registro é: {lista[0]} e o ultimo número é o: {lista[total]}')
+# print(lista)
+# lista.reverse()
+# print(lista)
+
+# soma_lista = sum(lista)
+# print(soma_lista)
+
+quantos_nomes: int = 3
+contador = 0
+lista: list = []
+while contador <= quantos_nomes:
+    
+    nomes = input(f'Digite o nome numero {contador}: ')
+    lista.append(nomes)
+    contador += 1
+lista.sort()
+print(lista)
+
+procura = input('Qual nome deseja procurar: ')
+
+
+if procura in lista:
+    print(f'Nome {procura}, encontrado')
+else:
+    print(f'Nome {procura}, não encontrado')
+
+
 '''
 🔹 Nível 2 – Dicionários
 Crie um dicionário com informações de uma pessoa:
