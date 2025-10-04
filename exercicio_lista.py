@@ -37,24 +37,24 @@ Substitua "banana" por "morango".
 # soma_lista = sum(lista)
 # print(soma_lista)
 
-quantos_nomes: int = 3
-contador = 0
-lista: list = []
-while contador <= quantos_nomes:
+# quantos_nomes: int = 3
+# contador = 0
+# lista: list = []
+# while contador <= quantos_nomes:
     
-    nomes = input(f'Digite o nome numero {contador}: ')
-    lista.append(nomes)
-    contador += 1
-lista.sort()
-print(lista)
+#     nomes = input(f'Digite o nome numero {contador}: ')
+#     lista.append(nomes)
+#     contador += 1
+# lista.sort()
+# print(lista)
 
-procura = input('Qual nome deseja procurar: ')
+# procura = input('Qual nome deseja procurar: ')
 
 
-if procura in lista:
-    print(f'Nome {procura}, encontrado')
-else:
-    print(f'Nome {procura}, não encontrado')
+# if procura in lista:
+#     print(f'Nome {procura}, encontrado')
+# else:
+#     print(f'Nome {procura}, não encontrado')
 
 
 '''
@@ -73,6 +73,40 @@ Faça um programa que peça 3 produtos e seus preços, armazenando em um dicion�
 Mostre todos os produtos com seus preços.
 Calcule a média dos preços.
 '''
+pessoa = {
+    "nome": "Maria",
+    "idade": 25,
+    "cidade": "São Paulo"
+}
+
+
+print(pessoa["idade"])
+pessoa["profissão"] =  'N/A'
+
+pessoa["cidade"] = 'Rio de Janeiro'
+del pessoa["idade"]
+print(pessoa)
+
+
+lista_produtos:dict = {}
+quantidade_repeticao: int = 0
+
+while quantidade_repeticao <= 3:
+    try:
+        produto: str = input('Digite o produto: ')
+        preco_produto = float(input('Digite o valor: '))
+
+        lista_produtos[produto] = preco_produto
+        quantidade_repeticao += 1
+    except:
+        print('Você digitou o valor incorreto!!!')
+print(lista_produtos)
+
+
+media_produto: float = sum(lista_produtos.values()) / len(lista_produtos)
+print(media_produto)
+
+
 
 '''
 🔹 Nível 3 – Listas + Dicionários
